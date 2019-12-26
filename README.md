@@ -21,13 +21,16 @@ This application provides end points to create blog application using node, expr
 You can test the application using postman.
 
 To begin with create user, by making 'POST' request using this endpoint: http://localhost:3000/user.
-Payload : 
+
+Payload :
+
 {
 	"firstName": "Lovish",
-  "lastName": "Sachdeva",
-  "email": "sachdeva@gmail.com",
-  "password" : "hello123"
+	"lastName": "Sachdeva",
+	"email": "sachdeva@gmail.com",
+	"password" : "hello123"
 }
+
 Note: Email should be unique.
 
 This will generate access token for that user to perform further crud operation on the user.
@@ -35,6 +38,7 @@ This will generate access token for that user to perform further crud operation 
 To update user make 'PUT' request using endpoint:  http://localhost:3000/user/:userId. In headers set the following:-
 
 x-access-token :  [access-token-generated-from-the- create-user]
+
 Content-Type : application/json
 
 To create blogpost:
