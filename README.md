@@ -53,6 +53,17 @@ Content-Type : application/json
 	PUT http://localhost:3000/user/:userid
 	DEl http://localhost:3000/user/:userid
 
+### Auth signin
+
+endpoint : http://localhost:3000/auth/signin
+
+#### Payload
+
+{
+   "email" : "sachdeva@gmail.com".,
+   "password" : "hello123"
+}
+
 
 ### To create blogpost:
 
