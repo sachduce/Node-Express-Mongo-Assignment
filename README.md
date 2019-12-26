@@ -20,9 +20,11 @@ This application provides end points to create blog application using node, expr
 # To Test
 You can test the application using postman.
 
-To begin with create user, by making 'POST' request using this endpoint: http://localhost:3000/user.
+### To begin with create user
 
-Payload :
+endpoint : http://localhost:3000/user
+
+#### Payload :
 
 {
 	"firstName": "Lovish",
@@ -31,17 +33,28 @@ Payload :
 	"password" : "hello123"
 }
 
-Note: Email should be unique.
+#### Note: Email should be unique.
 
 This will generate access token for that user to perform further crud operation on the user.
 
-To update user make 'PUT' request using endpoint:  http://localhost:3000/user/:userId. In headers set the following:-
+To update user make 'PUT' request using endpoint:  http://localhost:3000/user/:userId.
+
+In headers set the following:-
 
 x-access-token :  [access-token-generated-from-the- create-user]
 
 Content-Type : application/json
 
-To create blogpost:
+#### User Endpoints
+	GET http://localhost:3000/user
+	GET http://localhost:3000/user/:userid
+	GET http://localhost:3000/user/me
+	POST http://localhost:3000/user
+	PUT http://localhost:3000/user/:userid
+	DEl http://localhost:3000/user/:userid
+
+
+### To create blogpost:
 
 enpoint: http://localhost:3000/post
 
@@ -59,6 +72,34 @@ payload:
       "title": "New Post",
      "text": "Check out this post"
   }
+  
+#### Post Endpoints
+	GET http://localhost:3000/post
+	GET http://localhost:3000/post/:postId
+	POST http://localhost:3000/post
+	PUT http://localhost:3000/post/:postId
+	DEl http://localhost:3000/post/:postId
 
+### To create category
 
+enpoint: http://localhost:3000/categiry
 
+header: 
+
+x-access-token :  [access-token-generated-from-the- create-user]
+Content-Type : application/json
+
+payload:
+
+  {
+     "name": "Entertainment"
+  }
+  
+#### Note: name should be unique
+
+#### Category Endpoints
+	GET http://localhost:3000/category
+	GET http://localhost:3000/category/:categoryId
+	POST http://localhost:3000/category
+	PUT http://localhost:3000/category/:categoryId
+	DEl http://localhost:3000/category/:categoryId
