@@ -114,3 +114,7 @@ payload:
 	POST http://localhost:3000/category
 	PUT http://localhost:3000/category/:categoryId
 	DEl http://localhost:3000/category/:categoryId
+
+
+### Refer 
+You can import postman endpoints from Blog.postman_collection.json
