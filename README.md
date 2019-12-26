@@ -42,10 +42,12 @@ To create blogpost:
 enpoint: http://localhost:3000/post
 
 header: 
+
 x-access-token :  [access-token-generated-from-the- create-user]
 Content-Type : application/json
 
 payload:
+
   {
      "categories": [
            "5e03a0657e1e30293dc4131e"
